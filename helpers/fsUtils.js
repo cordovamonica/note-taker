@@ -1,3 +1,4 @@
+// Helper functions for reading and writing to files
 const fs = require('fs');
 const util = require('util');
 
@@ -20,4 +21,5 @@ const readAndAppend = (content, file) => {
     });
 }
 
+// export
 module.exports = { readFromFile, writeToFile, readAndAppend };

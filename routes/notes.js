@@ -1,12 +1,15 @@
+// require packages and files
 const note = require('express').Router();
 const { readFromFile, readAndAppend, writeToFile } = require('../helpers/fsUtils.js');
 const { v4: uuidv4 } = require('uuid');
 
+// GET Route for retrieving all the notes
 note.get('/', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 }
 );
 
+// GET Route for a specific note
 note.get('/:id', (req, res) => {
     const noteId = req.params.id;
     readFromFile('./db/db.json')
@@ -18,6 +21,7 @@ note.get('/:id', (req, res) => {
 }
 );
 
+// POST Route for a new note
 note.post('/', (req, res) => {
     const { title, text } = req.body;
     if (req.body) {
@@ -33,6 +37,7 @@ note.post('/', (req, res) => {
     }
 });
 
+// DELETE Route for notes
 note.delete('/:id', (req, res) => {
     const noteId = req.params.id;
     readFromFile('./db/db.json')
@@ -47,4 +52,5 @@ note.delete('/:id', (req, res) => {
 }
 );
 
+// export
 module.exports = note;

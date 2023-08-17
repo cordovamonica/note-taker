@@ -1,7 +1,7 @@
 # Note Taker
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-##Link to Deployed App: https://blooming-ocean-18473-3b49b80303f9.herokuapp.com/
+## Link to Deployed App: https://blooming-ocean-18473-3b49b80303f9.herokuapp.com/
 
 ## Description
 An app to create and log notes. The landing page will have a link to the notes section. There you can enter a title and text for your note. Once you have entered the information, click the save icon to save your note. The note will appear on the left side of the page. You can click on the note to view it. You can also click on the plus sign to create a new note. To delete a note, click on the trash can icon next to the note you want to delete.
